@@ -20,7 +20,7 @@ jobs:
           go-version: 'stable'
 
       - name: Install packwiz
-        run: go install ://github.com
+        run: go install github.com/packwiz/packwiz@latest
 
       - name: Export Modrinth Pack (.mrpack)
         run: ~/go/bin/packwiz modrinth export --output neoforge-pack.mrpack

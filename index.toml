@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".github/workflows/build.yml"
-hash = "641655ff23f13981db9a6473c5e9125fa816fb075c3c21cff4836cea30eac3a2"
+hash = "26b4fd2ea62a08dd32e6552abfd3809aa2eabfbcfeb3f616736e0c35b85b62e9"
 
 [[files]]
 file = "LICENSE"
