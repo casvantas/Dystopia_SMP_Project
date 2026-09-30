@@ -1,4 +1,4 @@
-name: Build and Release Modpack
+name: Build and Release Dystopia SMP Modpack
 
 on:
   push:
