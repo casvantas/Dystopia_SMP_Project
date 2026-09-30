@@ -1,0 +1,8 @@
+name = "hbmmodern"
+filename = "reinhardtshbm-0.1.0-alpha.jar"
+side = "both"
+
+[download]
+url = "https://github.com/SakurakoujiSaika1926/Reinhardt-s-HBM-NeoPort/releases/download/0.1.1/reinhardtshbm-0.1.0-alpha.jar"
+hash-format = "sha256"
+hash = "d26a26e147751b48ddf2e113606ac67650fbfcf4ad16066c3544bb01599bb202"

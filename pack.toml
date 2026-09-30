@@ -1,0 +1,13 @@
+name = "Dystopia_SMP_Project"
+author = "RubleDruble"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "11491ddfbb535c6f0de7dd6a7c8b1af6a09d688a479c6f09d1423a071ad53409"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.252"
