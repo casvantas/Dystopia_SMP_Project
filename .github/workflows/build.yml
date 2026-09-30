@@ -2,7 +2,8 @@ name: Build and Release Dystopia SMP Modpack
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+        - main
 
 permissions:
   contents: write
