@@ -1,0 +1,39 @@
+name: Build and Release Modpack
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install packwiz
+        run: go install ://github.com
+
+      - name: Export Modrinth Pack (.mrpack)
+        run: ~/go/bin/packwiz modrinth export --output neoforge-pack.mrpack
+
+      - name: Rename file to .zip for Prism
+        run: mv neoforge-pack.mrpack Dystopia_SMP_Modpack.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: Modpack Release v1.0.${{ github.run_number }}
+          files: Dystopia_SMP_Modpack.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
