@@ -29,12 +29,20 @@ jobs:
       - name: Rename file to .zip for Prism
         run: mv neoforge-pack.mrpack Dystopia_SMP_Modpack.zip
 
+      - name: Calculate Version Number
+        run: |
+          # Subtracts 5 from the build number safely using bash arithmetic
+          VERSION_OFFSET=$(( ${{ github.run_number }} - 5 ))
+          echo "PACK_VERSION=1.0.$VERSION_OFFSET" >> $GITHUB_ENV
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: Modpack Release v1.0.${{ github.run_number }}
+          tag_name: "${{ env.PACK_VERSION }}"
+          name: "Modpack Release ${{ env.PACK_VERSION }}"
           files: Dystopia_SMP_Modpack.zip
+          draft: false
+          prerelease: false
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
