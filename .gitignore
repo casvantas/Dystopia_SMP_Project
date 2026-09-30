@@ -1,0 +1,5 @@
+.packwiz/
+index.toml
+neoforge-pack.mrpack
+test-pack.mrpack
+*.log
