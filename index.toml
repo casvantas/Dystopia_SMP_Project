@@ -1,6 +1,18 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".github/workflows/build.yml"
+hash = "641655ff23f13981db9a6473c5e9125fa816fb075c3c21cff4836cea30eac3a2"
+
+[[files]]
+file = "LICENSE"
+hash = "fef781fff0517646c82bb62f6f092c83748ef980a26562d1633a6c1e9a4a3a9b"
+
+[[files]]
+file = "README.md"
+hash = "3acda11c86675aed30397607dd35c6f06d693c39ac85f718dae2e294e5f91ce9"
+
+[[files]]
 file = "mods/create-aeronautics.pw.toml"
 hash = "3b8895369640b2a52d3e05f7186185ba6798e44d513f11c5427a0fe9c16769e9"
 metafile = true
